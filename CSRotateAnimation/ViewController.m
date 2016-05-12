@@ -37,6 +37,7 @@
     // 设定旋转时间--打开这个注释
     //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kRotateDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     //        self.stopRotation = YES;
+    //        self.isAnimating = NO;
     //    });
     
     // 设定旋转次数--打开这个和下面两个注释
