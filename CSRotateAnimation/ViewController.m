@@ -23,7 +23,7 @@
 
 @property (nonatomic, assign) BOOL stopRotation;
 @property (nonatomic, assign) int  count;
-
+@property (nonatomic, assign) BOOL isAnimating;
 @end
 
 @implementation ViewController
@@ -41,7 +41,8 @@
     
     // 设定旋转次数--打开这个和下面两个注释
     //    self.count = 0;
-    
+    if (self.isAnimating) return;
+    self.isAnimating = YES;
     self.stopRotation = NO;
     [self rotate];
 }
@@ -60,6 +61,7 @@
 
 - (IBAction)stop:(id)sender
 {
+    self.isAnimating = NO;
     self.stopRotation = YES;
 }
 
