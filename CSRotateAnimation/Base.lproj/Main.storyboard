@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hgT-4i-jb9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="q6e-he-K68">
+            <objects>
+                <viewController id="hgT-4i-jb9" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3sT-pM-KGr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0jy-4W-qum"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vnz-WW-udE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-ug-FAl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="停止"/>
+                                <connections>
+                                    <action selector="stop:" destination="hgT-4i-jb9" eventType="touchUpInside" id="OBg-H2-lCw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_count_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="gAY-Ns-ghr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.99825543169999997" green="0.96027141810000005" blue="0.004912224598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7M0-m0-7YW"/>
+                                    <constraint firstAttribute="height" constant="50" id="bpd-4J-uLh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7M0-m0-7YW"/>
+                                        <exclude reference="bpd-4J-uLh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7M0-m0-7YW"/>
+                                        <include reference="bpd-4J-uLh"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0u-j3-I79">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="旋转"/>
+                                <connections>
+                                    <action selector="begin:" destination="hgT-4i-jb9" eventType="touchUpInside" id="1a4-bK-O3r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k0u-j3-I79" firstAttribute="top" secondItem="gAY-Ns-ghr" secondAttribute="top" id="Cki-xf-P8h">
+                                <variation key="heightClass=regular-widthClass=compact" constant="159"/>
+                            </constraint>
+                            <constraint firstItem="Pae-ug-FAl" firstAttribute="top" secondItem="gAY-Ns-ghr" secondAttribute="top" id="SXN-RH-9Fb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="159"/>
+                            </constraint>
+                            <constraint firstItem="k0u-j3-I79" firstAttribute="trailing" secondItem="gAY-Ns-ghr" secondAttribute="trailing" id="ewd-BR-8BL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-84"/>
+                            </constraint>
+                            <constraint firstItem="gAY-Ns-ghr" firstAttribute="centerX" secondItem="Vnz-WW-udE" secondAttribute="centerX" id="mVj-o0-ybG"/>
+                            <constraint firstItem="gAY-Ns-ghr" firstAttribute="top" secondItem="3sT-pM-KGr" secondAttribute="bottom" constant="77" id="ngT-ze-bKt"/>
+                            <constraint firstItem="Pae-ug-FAl" firstAttribute="leading" secondItem="gAY-Ns-ghr" secondAttribute="leading" id="nuQ-dE-WXh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="102"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pae-ug-FAl"/>
+                                <exclude reference="gAY-Ns-ghr"/>
+                                <exclude reference="k0u-j3-I79"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="nuQ-dE-WXh"/>
+                                <exclude reference="SXN-RH-9Fb"/>
+                                <exclude reference="Cki-xf-P8h"/>
+                                <exclude reference="ewd-BR-8BL"/>
+                                <exclude reference="mVj-o0-ybG"/>
+                                <exclude reference="ngT-ze-bKt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pae-ug-FAl"/>
+                                <include reference="gAY-Ns-ghr"/>
+                                <include reference="k0u-j3-I79"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="nuQ-dE-WXh"/>
+                                <include reference="SXN-RH-9Fb"/>
+                                <include reference="Cki-xf-P8h"/>
+                                <include reference="ewd-BR-8BL"/>
+                                <include reference="mVj-o0-ybG"/>
+                                <include reference="ngT-ze-bKt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgView" destination="gAY-Ns-ghr" id="wAf-G6-seN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3w-Qu-bea" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.75" y="309.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_count_down.png" width="21" height="21"/>
+    </resources>
+</document>
